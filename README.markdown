@@ -1,120 +1,90 @@
-## Introduction [![Build Status](https://secure.travis-ci.org/haiwen/seafile.svg?branch=master)](http://travis-ci.org/haiwen/seafile)
-
-Seafile is an open source cloud storage system with privacy protection and teamwork features. Collections of files are called libraries. Each library can be synced separately. A library can also be encrypted with a user chosen password. Seafile also allows users to create groups and easily sharing files into groups.
-
-
-## Feature Summary
-
-Seafile has the following features:
-
-### File syncing
-
-1. Selective sync for any folder.
-2. Correctly handles file conflicts based on history instead of timestamp.
-3. Only transfer content delta to the server. Interrupted transfers can be resumed.
-4. Sync with two or more servers.
-5. Sync with existing folders.
-
-
-### File sharing and collaboration
-
-1. Sharing folders between users or into groups.
-3. Download links with password protection
-4. Upload links
-5. Version control
-
-### Drive client
-
-* Access all files in the cloud via virtual drive.
-* Files are synced on demand.
-
-### Privacy protection
-
-1. Library encryption with a user chosen password.
-2. Client side encryption when using the desktop syncing.
-
-### Online documents and knowledge management (New)
-
-* Online Markdown editing in WYSIWYG way
-* A draft review workflow for online documents
-* Metadata management, including
-  * File labels
-  * Related documents
-* Wiki mode
-* Realtime notifications
-
-
-## Source repositories for Seafile components
-
-
-Each component of Seafile has its own source code repository on Github.
-
-* Sync client daemon (this repository): https://github.com/haiwen/seafile
-* Sync client GUI: https://github.com/haiwen/seafile-client
-* Server core: https://github.com/haiwen/seafile-server
-* Server web UI: https://github.com/haiwen/seahub
-* iOS app: https://github.com/haiwen/seafile-iOS
-* Android app: https://github.com/haiwen/seadroid
-* WebDAV: https://github.com/haiwen/seafdav
-
-Before version 6.0, the source code of "sync client daemon" and "server core" was mixed together in https://github.com/haiwen/seafile.
-But after 6.0 version, the server core is separated into its own repository.
-For this reason, the sync client daemon repository is still the "front page" for Seafile project on Github.
-
-Build and Run
-=============
-
-See <https://manual.seafile.com/build_seafile/server>
-
-Bug and Feature Request Reports
-===============================
-
-Please only submit bugs in GitHub issues (Pro customers should contact us via Email):
-
-* Server, Web interface (Seahub) and desktop clients: https://github.com/haiwen/seafile/issues
-* Android client: https://github.com/haiwen/seadroid/issues
-* iOS client: https://github.com/haiwen/seafile-iOS/issues
-
-Feature requests can be made and installation/usage problems can be discussed in the forum https://forum.seafile.com/.
-
-Internationalization (I18n)
-===========================
-
-* [Translate Seafile web ui](https://github.com/haiwen/seafile/wiki/Seahub-Translation)
-* [Translate Seafile desktop client](https://github.com/haiwen/seafile-client/#internationalization)
-* [Translate Seafile Android app](https://github.com/haiwen/seadroid#internationalization)
-* [Translate Seafile iOS app](https://github.com/haiwen/seafile-ios#internationalization-i18n)
-
-Change Logs
-===========
-
-See <https://manual.seafile.com/changelog/server-changelog/>
-
-
-Why Open Source
-===============
-
-Our primary goal is to build a first-class product. We think this goal can only be achieved by collaborating with the whole world.
-
-
-Contributing
-===========
-
-For more information read [Contribution](https://manual.seafile.com/contribution/).
-
-
-License
-=======
-
-- Seafile iOS client: Apache License v2
-- Seafile Android client: GPLv3
-- Desktop syncing client (this repository): GPLv2
-- Seafile Server core: AGPLv3
-- Seahub (Seafile server Web UI): Apache License v2
-
-Contact
-=======
-
-Twitter: @seafile <https://twitter.com/seafile>
-
-Forum: <https://forum.seafile.com>
+<div class="Box-sc-g0xbh4-0 QkQOb js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font _mstmutation="1" _msttexthash="5211505" _msthash="287">介绍</font><a href="http://travis-ci.org/haiwen/seafile" rel="nofollow"><img src="https://camo.githubusercontent.com/944ed09f312fd5e7e7cd8d69f6a496084a5d53536fb06f6a917cf51d11d8a2f7/68747470733a2f2f7365637572652e7472617669732d63692e6f72672f68616977656e2f73656166696c652e7376673f6272616e63683d6d6173746572" alt="构建状态" data-canonical-src="https://secure.travis-ci.org/haiwen/seafile.svg?branch=master" style="max-width: 100%;" _mstalt="181376" _msthash="286"></a></h2><a id="user-content-introduction-" class="anchor" aria-label="永久链接： 简介" href="#introduction-" _mstaria-label="523835" _msthash="288"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="1593308925" _msthash="289">Seafile 是一个开源云存储系统，具有隐私保护和团队合作功能。文件集合称为库。每个库都可以单独同步。还可以使用用户选择的密码对库进行加密。Seafile 还允许用户创建组并轻松地将文件共享到组中。</p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="12940551" _msthash="290">功能摘要</h2><a id="user-content-feature-summary" class="anchor" aria-label="永久链接： 功能摘要" href="#feature-summary" _mstaria-label="599170" _msthash="291"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="47732139" _msthash="292">Seafile 具有以下功能：</p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="10558899" _msthash="293">文件同步</h3><a id="user-content-file-syncing" class="anchor" aria-label="永久链接：文件同步" href="#file-syncing" _mstaria-label="476918" _msthash="294"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ol dir="auto">
+<li _msttexthash="46687160" _msthash="295">任何文件夹的选择性同步。</li>
+<li _msttexthash="118675206" _msthash="296">根据历史记录而不是时间戳正确处理文件冲突。</li>
+<li _msttexthash="126489480" _msthash="297">仅将内容增量传输到服务器。可以恢复中断的传输。</li>
+<li _msttexthash="41936414" _msthash="298">与两个或多个服务器同步。</li>
+<li _msttexthash="28853643" _msthash="299">与现有文件夹同步。</li>
+</ol>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="19380348" _msthash="300">文件共享和协作</h3><a id="user-content-file-sharing-and-collaboration" class="anchor" aria-label="永久链接：文件共享和协作" href="#file-sharing-and-collaboration" _mstaria-label="1256034" _msthash="301"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ol dir="auto">
+<li _msttexthash="80587819" _msthash="302">在用户之间或将文件夹共享到组之间。</li>
+<li _msttexthash="41628028" _msthash="303">下载带密码保护的链接</li>
+<li _msttexthash="11703406" _msthash="304">上传链接</li>
+<li _msttexthash="11129911" _msthash="305">版本控制</li>
+</ol>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="19941012" _msthash="306">驱动器客户端</h3><a id="user-content-drive-client" class="anchor" aria-label="永久链接：云端硬盘客户端" href="#drive-client" _mstaria-label="476684" _msthash="307"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li _msttexthash="86515975" _msthash="308">通过虚拟驱动器访问云中的所有文件。</li>
+<li _msttexthash="21901724" _msthash="309">文件按需同步。</li>
+</ul>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="12423905" _msthash="310">隐私保护</h3><a id="user-content-privacy-protection" class="anchor" aria-label="永久链接： 隐私保护" href="#privacy-protection" _mstaria-label="743886" _msthash="311"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ol dir="auto">
+<li _msttexthash="72090317" _msthash="312">使用用户选择的密码进行库加密。</li>
+<li _msttexthash="61138974" _msthash="313">使用桌面同步时的客户端加密。</li>
+</ol>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="72012785" _msthash="314">在线文档和知识管理（新）</h3><a id="user-content-online-documents-and-knowledge-management-new" class="anchor" aria-label="永久链接：在线文档和知识管理（新）" href="#online-documents-and-knowledge-management-new" _mstaria-label="2205801" _msthash="315"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li _msttexthash="69327362" _msthash="316">以所见即所得的方式在线 Markdown 编辑</li>
+<li _msttexthash="62299744" _msthash="317">在线文档的草稿审阅工作流程</li>
+<li><font _mstmutation="1" _msttexthash="34319896" _msthash="318">元数据管理，包括</font><ul dir="auto">
+<li _msttexthash="11693084" _msthash="319">文件标签</li>
+<li _msttexthash="11454937" _msthash="320">相关文档</li>
+</ul>
+</li>
+<li _msttexthash="7726433" _msthash="321">Wiki 模式</li>
+<li _msttexthash="13155142" _msthash="322">实时通知</li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="39372268" _msthash="323">Seafile 组件的源存储库</h2><a id="user-content-source-repositories-for-seafile-components" class="anchor" aria-label="永久链接：Seafile 组件的源存储库" href="#source-repositories-for-seafile-components" _mstaria-label="2025023" _msthash="324"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="156716885" _msthash="325">Seafile 的每个组件在 Github 上都有自己的源代码仓库。</p>
+<ul dir="auto">
+<li _msttexthash="108303741" _msthash="326">同步客户端守护程序（此存储库）：<a href="https://github.com/haiwen/seafile" _istranslated="1">https://github.com/haiwen/seafile</a></li>
+<li _msttexthash="29899532" _msthash="327">同步客户端 GUI：<a href="https://github.com/haiwen/seafile-client" _istranslated="1">https://github.com/haiwen/seafile-client</a></li>
+<li _msttexthash="26009880" _msthash="328">服务器核心：<a href="https://github.com/haiwen/seafile-server" _istranslated="1">https://github.com/haiwen/seafile-server</a></li>
+<li _msttexthash="21261227" _msthash="329">服务器 Web UI：<a href="https://github.com/haiwen/seahub" _istranslated="1">https://github.com/haiwen/seahub</a></li>
+<li _msttexthash="29804489" _msthash="330">iOS 应用程序：<a href="https://github.com/haiwen/seafile-iOS" _istranslated="1">https://github.com/haiwen/seafile-iOS</a></li>
+<li _msttexthash="39008762" _msthash="331">Android 应用程序：<a href="https://github.com/haiwen/seadroid" _istranslated="1">https://github.com/haiwen/seadroid</a></li>
+<li _msttexthash="12346321" _msthash="332">WebDAV：<a href="https://github.com/haiwen/seafdav" _istranslated="1">https://github.com/haiwen/seafdav</a></li>
+</ul>
+<p dir="auto" _msttexthash="2446405338" _msthash="333">在 6.0 版本之前，“sync client daemon” 和 “server core” 的源代码在 <a href="https://github.com/haiwen/seafile" _istranslated="1">https://github.com/haiwen/seafile</a> 中混合在一起。
+但在 6.0 版本之后，服务器核心被分离到自己的存储库中。
+因此，同步客户端守护程序存储库仍然是 Github 上 Seafile 项目的“首页”。</p>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto" _msttexthash="17545086" _msthash="334">构建并运行</h1><a id="user-content-build-and-run" class="anchor" aria-label="永久链接：构建并运行" href="#build-and-run" _mstaria-label="466622" _msthash="335"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="7528027" _msthash="336">查看 <a href="https://manual.seafile.com/build_seafile/server" rel="nofollow" _istranslated="1">https://manual.seafile.com/build_seafile/server</a></p>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto" _msttexthash="31531760" _msthash="337">Bug 和功能请求报告</h1><a id="user-content-bug-and-feature-request-reports" class="anchor" aria-label="永久链接：Bug 和功能请求报告" href="#bug-and-feature-request-reports" _mstaria-label="1255137" _msthash="338"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="320778068" _msthash="339">请仅提交 GitHub 问题中的错误（Pro 客户应通过电子邮件与我们联系）：</p>
+<ul dir="auto">
+<li _msttexthash="140932194" _msthash="340">服务器、Web 界面 （Seahub） 和桌面客户端：<a href="https://github.com/haiwen/seafile/issues" _istranslated="1">https://github.com/haiwen/seafile/issues</a></li>
+<li _msttexthash="32245629" _msthash="341">Android 客户端：<a href="https://github.com/haiwen/seadroid/issues" _istranslated="1">https://github.com/haiwen/seadroid/issues</a></li>
+<li _msttexthash="24567751" _msthash="342">iOS 客户端：<a href="https://github.com/haiwen/seafile-iOS/issues" _istranslated="1">https://github.com/haiwen/seafile-iOS/issues</a></li>
+</ul>
+<p dir="auto" _msttexthash="304987332" _msthash="343">可以在论坛 <a href="https://forum.seafile.com/" rel="nofollow" _istranslated="1">https://forum.seafile.com/</a> 中提出功能请求并讨论安装/使用问题。</p>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto" _msttexthash="29782207" _msthash="344">国际化 （I18n）</h1><a id="user-content-internationalization-i18n" class="anchor" aria-label="永久链接：国际化 （I18n）" href="#internationalization-i18n" _mstaria-label="1076452" _msthash="345"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><a href="https://github.com/haiwen/seafile/wiki/Seahub-Translation" _msttexthash="6916949" _msthash="346">翻译 Seafile Web UI</a></li>
+<li><a href="https://github.com/haiwen/seafile-client/#internationalization" _msttexthash="40813812" _msthash="347">翻译 Seafile 桌面客户端</a></li>
+<li><a href="https://github.com/haiwen/seadroid#internationalization" _msttexthash="23586030" _msthash="348">翻译 Seafile Android 应用</a></li>
+<li><a href="https://github.com/haiwen/seafile-ios#internationalization-i18n" _msttexthash="20650630" _msthash="349">翻译 Seafile iOS 应用</a></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto" _msttexthash="11334843" _msthash="350">更改日志</h1><a id="user-content-change-logs" class="anchor" aria-label="永久链接： 更改日志" href="#change-logs" _mstaria-label="425113" _msthash="351"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="8003398" _msthash="352">查看 <a href="https://manual.seafile.com/changelog/server-changelog/" rel="nofollow" _istranslated="1">https://manual.seafile.com/changelog/server-changelog/</a></p>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto" _msttexthash="23255375" _msthash="353">为什么选择开源</h1><a id="user-content-why-open-source" class="anchor" aria-label="永久链接： 为什么选择开源" href="#why-open-source" _mstaria-label="548691" _msthash="354"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="360548123" _msthash="355">我们的主要目标是打造一流的产品。我们认为，只有与全世界合作，才能实现这一目标。</p>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto" _msttexthash="6354283" _msthash="356">贡献</h1><a id="user-content-contributing" class="anchor" aria-label="永久链接： 贡献" href="#contributing" _mstaria-label="521066" _msthash="357"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="67811250" _msthash="358">有关更多信息<a href="https://manual.seafile.com/contribution/" rel="nofollow" _istranslated="1">，请阅读 贡献</a>。</p>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto" _msttexthash="9675445" _msthash="359">许可证</h1><a id="user-content-license" class="anchor" aria-label="永久链接：许可证" href="#license" _mstaria-label="331903" _msthash="360"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li _msttexthash="70071495" _msthash="361">Seafile iOS 客户端：Apache 许可证 v2</li>
+<li _msttexthash="43767984" _msthash="362">Seafile Android 客户端：GPLv3</li>
+<li _msttexthash="90706785" _msthash="363">桌面同步客户端（此存储库）：GPLv2</li>
+<li _msttexthash="41517385" _msthash="364">Seafile 服务器核心：AGPLv3</li>
+<li _msttexthash="127660767" _msthash="365">Seahub（Seafile 服务器 Web UI）：Apache 许可证 v2</li>
+</ul>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto" _msttexthash="6317012" _msthash="366">联系</h1><a id="user-content-contact" class="anchor" aria-label="永久链接： 联系我们" href="#contact" _mstaria-label="334295" _msthash="367"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="14216956" _msthash="368">推特：@seafile <a href="https://twitter.com/seafile" rel="nofollow" _istranslated="1">https://twitter.com/seafile</a></p>
+<p dir="auto" _msttexthash="13910091" _msthash="369">论坛： <a href="https://forum.seafile.com" rel="nofollow" _istranslated="1">https://forum.seafile.com</a></p>
+</article></div>
